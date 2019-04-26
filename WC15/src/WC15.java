@@ -62,14 +62,14 @@ public class WC15
     {
       answer = str.substring(0, str.length());
     }
-   if(!str.substring(0, 2).equals("a"))
+   if(!str.substring(0, 2).equals("ab"))
     {
-      answer += str.substring(0) + str.substring(2, str.length());    
+      answer += str.substring(3, str.length());    
     }
-    if (str.substring(0, 2).equals("ab"))
-    {
-      answer+= str.substring(0, str.length());
-    }
+   else  if (str.substring(1).equals("b"))
+   {
+     answer+=str.substring(0) + str.substring(str.length()) ;
+   }
     //TODO: Finish
     return answer;
   }
