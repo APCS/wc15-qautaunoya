@@ -93,15 +93,25 @@ public class WC15
   public static String hateX(String str)
   {
     String answer = "";
-    if( str.substring(0).equals("x"))
+    if( str.substring(0,1).equals("x"))
     {
-      answer += str.substring(1, str.length());
+      answer = str.substring(1, str.length());
     }
-    else if( str.substring(1).equals("x"))
+    else if (str.substring(1,2).equals("x"))
+    
     {
-      answer = str.substring(0) + str.substring(2, str.length());
+      answer = str.substring(0, 1)+str.substring(2, str.length());
+
     }
+    else if (!str.substring(0,1).equals("x") || str.substring(1,2).equals("x") )
     //TODO: Finish
+    {
+      answer = str.substring(0, str.length());
+    }
+    else if(str.substring(0,2).equals("x"))
+    {
+      answer = "";
+    }
     return answer;
   }
 
