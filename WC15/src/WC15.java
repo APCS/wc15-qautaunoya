@@ -58,18 +58,19 @@ public class WC15
   public static String chopFront(String str)
   {
     String answer = "";
-    if(str.substring(0).equals("a"))
+    if(str.substring(0 , 1).equals("a") ||str.substring(1,2).equals("b")  )
     {
       answer = str.substring(0, str.length());
     }
-   if(!str.substring(0, 2).equals("ab"))
+    else if(!str.substring(0 , 1).equals("a") ||str.substring(1,2).equals("b") )
+{
+     answer = str.substring(2, str.length());
+
+}
+    else if (!str.substring(1,2).equals("b") )
     {
-      answer += str.substring(3, str.length());    
+      answer = str.substring(0, 1) + str.substring(1, str.length());
     }
-   else  if (str.substring(1).equals("b"))
-   {
-     answer+=str.substring(0) + str.substring(str.length()) ;
-   }
     //TODO: Finish
     return answer;
   }
