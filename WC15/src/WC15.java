@@ -30,13 +30,13 @@ public class WC15
    */
   public static String centralThree(String letters)
   {
-    //TODO: Finish
+    // TODO: Finish
     int start, end = 0;
     String answer = "";
-    start = letters.length() / 2  - 1;
-   end = letters.length() / 2 + 2;
- 
-   answer = letters.substring(start, end);
+    start = letters.length() / 2 - 1;
+    end = letters.length() / 2 + 2;
+
+    answer = letters.substring(start, end);
     return answer;
   }
 
@@ -58,20 +58,21 @@ public class WC15
   public static String chopFront(String str)
   {
     String answer = "";
-    if(str.substring(0 , 1).equals("a") ||str.substring(1,2).equals("b")  )
+    if (str.substring(0, 1).equals("a") || str.substring(1, 2).equals("b"))
     {
       answer = str.substring(0, str.length());
     }
-    else if(!str.substring(0 , 1).equals("a") ||str.substring(1,2).equals("b") )
-{
-     answer = str.substring(2, str.length());
+    else if (!str.substring(0, 1).equals("a")
+      || str.substring(1, 2).equals("b"))
+    {
+      answer = str.substring(2, str.length());
 
-}
-    else if (!str.substring(1,2).equals("b") )
+    }
+    else if (!str.substring(1, 2).equals("b"))
     {
       answer = str.substring(0, 1) + str.substring(1, str.length());
     }
-    //TODO: Finish
+    // TODO: Finish
     return answer;
   }
 
@@ -93,22 +94,23 @@ public class WC15
   public static String hateX(String str)
   {
     String answer = "";
-    if( str.substring(0,1).equals("x"))
+    if (str.substring(0, 1).equals("x"))
     {
       answer = str.substring(1, str.length());
     }
-    else if (str.substring(1,2).equals("x"))
-    
+    else if (str.substring(1, 2).equals("x"))
+
     {
-      answer = str.substring(0, 1)+str.substring(2, str.length());
+      answer = str.substring(0, 1) + str.substring(2, str.length());
 
     }
-    else if (!str.substring(0,1).equals("x") || str.substring(1,2).equals("x") )
-    //TODO: Finish
+    else if (!str.substring(0, 1).equals("x")
+      || str.substring(1, 2).equals("x"))
+    // TODO: Finish
     {
       answer = str.substring(0, str.length());
     }
-    else if(str.substring(0,2).equals("x"))
+    else if (str.substring(0, 2).equals("x"))
     {
       answer = "";
     }
@@ -127,10 +129,10 @@ public class WC15
    */
   public static void swapRows(int[][] mat, int rowAIndex, int rowBIndex)
   {
-    //TODO: Finish
-    int [] temp = mat [rowAIndex];
-    mat [rowAIndex] = mat [rowBIndex];
-    mat [rowBIndex] = temp;
+    // TODO: Finish
+    int[] temp = mat[rowAIndex];
+    mat[rowAIndex] = mat[rowBIndex];
+    mat[rowBIndex] = temp;
   }
 
   /**
@@ -145,16 +147,20 @@ public class WC15
    */
   public static void swapColumns(int[][] mat, int colAIndex, int colBIndex)
   {
-    int [][] newArray = new int [mat.length] [mat[0].length];
-    
-  for(int r = 0; r < mat.length; r++)
-  {
-    for(int c = 0; c < mat[0].length; c++)
+    int temp = 0;
+
+    for (int r = 0; r < mat.length / 2; r++)
     {
-      
+      for (int c = 0; c < mat[0].length; c++)
+      {
+        temp = mat[r][colAIndex];
+        mat[r][colAIndex] = mat[r][colBIndex];
+        mat[r][colBIndex] = temp;
+
+      }
     }
-  }
-    //TODO: Finish
+
+    // TODO: Finish
   }
 
   /**
@@ -173,8 +179,35 @@ public class WC15
    */
   public static String[][] fill2DWithLetters(String str, int rows, int cols)
   {
-    //TODO: Finish
-    return new String[][] {{"42"}};
+    String[][] newArray = new String[rows][cols];
+    
+    // TODO: Finish
+
+    
+    for(int i = 0; i < str.length(); i++)
+        {  
+    for (int r = 0; r < rows; r++)
+    {
+      for (int c = 0; c < cols; c++)
+      {
+        
+             newArray[r][c] = str.substring(i, i + 1);
+        }
+     
+
+      }
+    }
+//    }if (str.length() > (rows * cols))
+//        {
+//          newArray[r][c] = str.substring(i);
+//        }
+//        else if (str.length() < (rows * cols))
+//        {
+//          newArray[r][c] = null;
+//        }
+   
+
+    return newArray;
   }
 
   /**
@@ -206,7 +239,7 @@ public class WC15
    */
   public static int[][] fillDownAndUp(int[] vals, int rows, int cols)
   {
-    //TODO: Finish
+    // TODO: Finish
     return new int[][] {{42}};
   }
 
@@ -240,9 +273,9 @@ public class WC15
    * @return a smaller array containing the specified elements
    */
   public static int[][] crop2D(int[][] mat, int startRow, int startCol,
-      int endRow, int endCol)
+    int endRow, int endCol)
   {
-    //TODO: Finish
+    // TODO: Finish
     return new int[][] {{42}};
   }
 
